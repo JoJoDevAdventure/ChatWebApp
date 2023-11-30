@@ -1,0 +1,15 @@
+<div class="background">
+    <form (submit)="onSubmit()" class="form-card">
+        <div class="form-title">Welcome 👋</div>
+
+        <div class="form-subtitle">Set a username to get started</div>
+
+        <div class="auth">
+            <div class="auth-label">Username</div>
+            <input class="auth-input" name="username" [(ngModel)]="username" />
+            <button class="auth-button" type="submit">
+                Enter
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,6 @@
+<div *ngIf=!user>
+  <app-login (onAuth)="onAuth($event)"></app-login>
+</div>
+<div *ngIf="user">
+  <app-chats [user]="user"></app-chats>
+</div>
