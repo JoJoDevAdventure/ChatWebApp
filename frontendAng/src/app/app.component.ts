@@ -18,21 +18,14 @@ export class AppComponent {
   title = 'frontendAng';
   constructor(private authService: AuthService) {}
 
-  user: String | undefined; // Assuming user information
+  user: any | undefined; // Assuming user information
 
   ngOnInit(): void {
-    this.checkAuthentication();
+    
   }
 
-  onAuth(user: string): void {
+  onAuth(user: any): void {
     this.user = user;
   }
 
-  checkAuthentication(): void {
-    if (!this.authService.isAuthenticated()) {
-      // Redirect to the login page or handle authentication as needed
-    } else {
-      // this.user = this.authService.getUser();
-    }
-  }
 }

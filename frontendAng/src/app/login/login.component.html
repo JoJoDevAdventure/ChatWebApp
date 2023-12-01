@@ -7,9 +7,16 @@
         <div class="auth">
             <div class="auth-label">Username</div>
             <input class="auth-input" name="username" [(ngModel)]="username" />
+            <div class="pass-label">Password</div>
+            <input class="auth-input" name="password" [(ngModel)]="password" type="password" />
             <button class="auth-button" type="submit">
                 Enter
             </button>
+        </div>
+
+        <div class="register-section">
+            <div class="form-subtitle">Don't have an account ?</div>
+            <a href="/register" class="register-link">Register here</a>
         </div>
     </form>
 </div>

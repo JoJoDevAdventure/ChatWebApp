@@ -8,14 +8,18 @@ const app = express(); // <-- Corrected this line
 app.use(bodyParser.json());
 app.use(cors({ origin: true }));
 
-app.post("/authenticate", async (req, res) => {
+app.post("/login", async (req, res) => {
     const { username } = req.body;
+    const { secret } = req.body;
 
     try {
-        const r = await axios.put(
-            'https://api.chatengine.io/users/',
-            {username: username, secret: username, first_name:username},
-            {headers:{"private-key": "d80cf0a3-98f9-4216-87c7-aecabaeddd91"}},
+        const r = await axios.get(
+            'https://api.chatengine.io/users/me/',
+            {headers:{
+                "Project-ID":"82804fee-ab84-4291-a0e1-aabb04324297",
+                "User-Name":username,
+                "User-Secret":secret
+            }},
         )
         return res.status(r.status).json(r.data)
     } catch (e) {

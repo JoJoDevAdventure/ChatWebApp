@@ -54,6 +54,16 @@ body {
     font-family: Avenir;
     width: 100px;
   }
+
+  .pass-label {
+    position: absolute;
+    top: 70px;
+    left: 18px;
+    font-size: 11px;
+    color: rgb(175, 175, 175);
+    font-family: Avenir;
+    width: 100px;
+  }
   .auth-input {
     background-color: #3e404b;
     color: white;
@@ -88,3 +98,15 @@ body {
     color: white; 
     background: rgb(43, 47, 60);
   }
+
+  .register-section{
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .register-link {
+    font-size: 18px;
+    margin-left: 5px;
+    color: #fa541c;
+    text-decoration: none;
+ }

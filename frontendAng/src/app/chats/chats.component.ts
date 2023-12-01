@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './chats.component.css'
 })
 export class ChatsComponent {
-  @Input() user: String | undefined;
+  @Input() user: any | undefined;
 }
